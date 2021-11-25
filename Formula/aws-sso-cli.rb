@@ -5,7 +5,7 @@ class AwsSsoCli < Formula
   sha256 "8b5e0991648b933777c2f21b4d35c3e1d155fd1be4a04e5b56992c0373fce12c"
 
   depends_on :xcode
-  depends_on "go" => [:build]
+  depends_on "go" => [:build, "1.17.0"]
 
   def install
     ENV["BREW_INSTALL"] = "1"
