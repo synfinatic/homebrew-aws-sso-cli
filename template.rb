@@ -4,7 +4,6 @@ class AwsSsoCli < Formula
   url "__URL__"
   sha256 "__SHA256__"
 
-  depends_on :xcode
   depends_on "go" => [:build, "1.17.0"]
 
   def install
