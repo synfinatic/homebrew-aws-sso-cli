@@ -4,8 +4,8 @@ class AwsSsoCli < Formula
   url "__URL__"
   sha256 "__SHA256__"
 
+  depends_on "go" => [:build]
   depends_on :xcode
-  depends_on "go" => [:build, "1.17.0"]
 
   def install
     ENV["BREW_INSTALL"] = "1"
@@ -16,7 +16,7 @@ class AwsSsoCli < Formula
   end
 
   test do
-    assert_match /AWS SSO CLI Version __VERSION__/, shell_output("#{bin}/aws-sso version")
-    assert_match /Please specify --sso/, shell_output("#{bin}/aws-sso --config /dev/null  2>&1")
+    assert_match "AWS SSO CLI Version __VERSION__", shell_output("#{bin}/aws-sso version")
+    assert_match "Please specify --sso/" shell_output("#{bin}/aws-sso --config /dev/null  2>&1")
   end
 end
