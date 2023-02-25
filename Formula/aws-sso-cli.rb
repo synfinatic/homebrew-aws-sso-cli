@@ -4,8 +4,8 @@ class AwsSsoCli < Formula
   url "https://github.com/synfinatic/aws-sso-cli/archive/refs/tags/v1.9.7.tar.gz"
   sha256 "ed62956d2536bf66cb7dfee795ddf3030f2b77cd754fe598cbeb00de12616d85"
 
+  depends_on "go" => [:build]
   depends_on :xcode
-  depends_on "go" => [:build, "1.17.0"]
 
   def install
     ENV["BREW_INSTALL"] = "1"
@@ -16,7 +16,7 @@ class AwsSsoCli < Formula
   end
 
   test do
-    assert_match /AWS SSO CLI Version 1.9.7/, shell_output("#{bin}/aws-sso version")
-    assert_match /Please specify --sso/, shell_output("#{bin}/aws-sso --config /dev/null  2>&1")
+    assert_match "AWS SSO CLI Version 1.9.7", shell_output("#{bin}/aws-sso version")
+    assert_match "Please specify --sso", shell_output("#{bin}/aws-sso --config /dev/null  2>&1")
   end
 end
