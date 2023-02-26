@@ -6,9 +6,9 @@ https://github.com/synfinatic/aws-sso-cli).
 
 ## How do I install these formulae?
 
-`brew install synfinatic/aws-sso-cli/<formula>`
+`brew install synfinatic/aws-sso-cli/aws-sso-cli>`
 
-Or `brew tap synfinatic/aws-sso-cli` and then `brew install <formula>`.
+Or `brew tap synfinatic/aws-sso-cli` and then `brew install aws-sso-cli`.
 
 ## Documentation
 
